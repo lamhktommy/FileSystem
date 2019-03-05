@@ -18,7 +18,7 @@ if ($username==''){
 	header("refresh:0.1;url=index.html");
 }
 else { 
-	$conn=mysqli_connect('sophia.cs.hku.hk', 'hklam', 'Y6117501', 'hklam') or die ('Error! '.mysqli_connect_error($conn));
+	$conn=mysqli_connect('sophia.cs.hku.hk', '*****', '*****', '*****') or die ('Error! '.mysqli_connect_error($conn));
 	if ($content != '') {
 		$query = "UPDATE FS_Files 
 		SET FileContent='$content' 
