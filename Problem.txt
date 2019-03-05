@@ -1,2 +1,0 @@
-1. In upload.php:
-dun know how to show pop-up window when filename is same as database one
