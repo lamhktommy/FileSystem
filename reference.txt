@@ -1,0 +1,10 @@
+Reference:
+
+1. pop-up window  
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal 
+
+2. overall layout 
+https://www.youtube.com/watch?v=H5CyDlMSDRU
+
+3. File upload 
+https://www.youtube.com/watch?v=2jxM7IwpiXc

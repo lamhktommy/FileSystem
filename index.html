@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <form id= "form" action="verifylogin.php" method="POST" onsubmit="return validateForm()">
+        <h1>Login</h1>
+        <input type="text" name="Username" id="ac" placeholder="Username"><br>
+        <input type="password" name="Password" id="pw" placeholder="Password"><br>
+        <div id='ext'></div>
+        <button class='btn' type="submit" id="SubmitButton">SUBMIT</button><br>    <!--link to verifylogin.php-->
+        <a href="createaccount.html"><button class='btn' type="button" id="CreateButton">Create an account</button></a><br>   
+    </form>
+
+    <!--
+    <input type="checkbox" onclick="myFunction()">Show Password -->
+    <script>
+        function validateForm() {
+            var Username = document.forms["form"]["Username"].value;
+            var Password = document.forms["form"]["Password"].value;
+            if (Username == "" || Password=="") {
+                alert("Please do not leave the fields empty");
+                return false;
+            }
+        }
+    </script> 
+</body>
+</html>

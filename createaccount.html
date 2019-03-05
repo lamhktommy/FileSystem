@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+   
+    <div id="entries">
+    
+    <div id="newform">
+        <form id="form" action="create.php" onsubmit="return validate()" method="POST">
+            <h1>New Account</h1>
+            <h3>Username</h3> <input type="text" name="newusername" placeholder="Desired Username"><br>
+            <h3>Password</h3> <input type="password" name="newpassword" placeholder="Your Password"><br>
+            <a href="index.html"><button class='btn' id="backButton" type="button">Back</button></a><br> <!--link to index.html-->
+            <button class='btn' id="SignUpButton" type="submit">Sign Up</button><br> <!--link to create.php-->
+        </form>    
+    </div>
+
+    </div>
+
+    <script>
+        function validate() {
+            var newac=document.forms["form"]["newusername"].value;
+            var newpw=document.forms["form"]["newpassword"].value;
+            var valid=true;
+            var acformat = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+            var pwformat=/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/
+            if (newac=='' || newpw=='') {
+               alert('Please do not leave the fields empty'); 
+               valid=false;
+            }  
+            else if (newac.length < 3){
+                alert('Username must be longer than 3 characters');
+                valid=false;
+            }
+            
+            else if (acformat.test(newac)){
+                alert('Username can only consist of characters and numbers');
+                valid=false;
+            }
+            
+            else if (newpw.length <6 || newpw.length>15 || (!pwformat.test(newpw))) {
+                valid=false;
+                alert('The length of the password must be between 6 to 15 characters and it must consist of only alphanumerical characters with at least one alphabet and one numerical character');
+            }
+            return valid;
+        }
+
+    </script>         
+
+</body>
+</html>
