@@ -1,6 +1,6 @@
 <?php
 
-$conn=mysqli_connect('sophia.cs.hku.hk', 'hklam', 'Y6117501', 'hklam') or die ('Error! '.mysqli_connect_error($conn));
+$conn=mysqli_connect('sophia.cs.hku.hk', '*****', '*****', '*****') or die ('Error! '.mysqli_connect_error($conn));
 $username =$_POST['Username'];
 $password=$_POST['Password'];
 $query="SELECT * FROM FS_Users WHERE Username='$username'";
