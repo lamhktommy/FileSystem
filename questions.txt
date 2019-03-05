@@ -1,5 +1,0 @@
-Questions for challenge:
-
-1. Is that ok for me to use HTML and PHP to build the system?
-2. What type of files would be in the system?
-3. Is a folder / related hierarchy include in the system?
