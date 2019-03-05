@@ -29,7 +29,6 @@ else {
 <?php
 if (isset($_FILES['userfile']) and isset($_FILES['userfile']['name'])){
 	$fname = $_FILES['userfile']['name'];
-	print $fname;
 	$conn=mysqli_connect('sophia.cs.hku.hk', 'hklam', 'Y6117501', 'hklam') or die ('Error! '.mysqli_connect_error($conn));
 	$query = "SELECT * FROM FS_Files WHERE UserID='$userid'";
 	$result = mysqli_query($conn, $query) or die ('Failed to query '.mysqli_error($conn));
@@ -44,18 +43,17 @@ if (isset($_FILES['userfile']) and isset($_FILES['userfile']['name'])){
 				   	<a href='upload.php'><button type='button'>No</button></a><br>
 				</form>";
 			$_SESSION['file'] = $_FILES['userfile'];
+			$content = file_get_contents($_FILES["userfile"]["tmp_name"]); 
+			$_SESSION['content'] = $content;
 		}
 	}
 	if (!$same){
 		$file = addslashes(file_get_contents($_FILES["userfile"]["tmp_name"])); 
-		$query = "INSERT INTO FS_Files (UserID,FileName,FileContent) VALUES($userid,'$fname','$file')";
-		$result = mysqli_query($conn, $query) or die ('Failed to query '.mysqli_error($conn));
+		$query = "INSERT INTO FS_Files (UserID,FileName,FileContent) VALUES('$userid','$fname','$file');";
+		$result = mysqli_query($conn, $query) or die ('Failed to query 1'.mysqli_error($conn));
 	}
 }
 
-echo '<pre>';
-print_r($_SESSION['file']);
-echo '</pre>';
 mysqli_free_result($result);
 mysqli_close($conn);
 ?>
