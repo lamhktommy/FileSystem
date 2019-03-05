@@ -29,7 +29,7 @@ else {
 <?php
 if (isset($_FILES['userfile']) and isset($_FILES['userfile']['name'])){
 	$fname = $_FILES['userfile']['name'];
-	$conn=mysqli_connect('sophia.cs.hku.hk', 'hklam', 'Y6117501', 'hklam') or die ('Error! '.mysqli_connect_error($conn));
+	$conn=mysqli_connect('sophia.cs.hku.hk', '*****', '*****', '*****') or die ('Error! '.mysqli_connect_error($conn));
 	$query = "SELECT * FROM FS_Files WHERE UserID='$userid'";
 	$result = mysqli_query($conn, $query) or die ('Failed to query '.mysqli_error($conn));
 	
