@@ -12,7 +12,7 @@ else {
 
 	if(!empty($_GET['fid'])){
 
-		$conn=mysqli_connect('sophia.cs.hku.hk', 'hklam', 'Y6117501', 'hklam') or die ('Error! '.mysqli_connect_error($conn));
+		$conn=mysqli_connect('sophia.cs.hku.hk', '*****', '*****', '*****') or die ('Error! '.mysqli_connect_error($conn));
 		$query="SELECT * FROM FS_Files WHERE FileID='$fid'";
 		$result = mysqli_query($conn, $query) or die ('Failed to query '.mysqli_error($conn));
 		while($row = mysqli_fetch_array($result)) {
