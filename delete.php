@@ -13,7 +13,7 @@ else {
 
 if(!empty($_GET['fid'])){
 	$fid = $_GET['fid'];
-	$conn=mysqli_connect('sophia.cs.hku.hk', 'hklam', 'Y6117501', 'hklam') or die ('Error! '.mysqli_connect_error($conn));
+	$conn=mysqli_connect('sophia.cs.hku.hk', '*****', '*****', '*****') or die ('Error! '.mysqli_connect_error($conn));
 	$query = "DELETE FROM FS_Files WHERE FileID='$fid';";
 	$result = mysqli_query($conn, $query) or die ('Failed to query '.mysqli_error($conn));
 	header('Location: myfiles.php');
