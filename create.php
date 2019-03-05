@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect('sophia.cs.hku.hk', 'hklam', 'Y6117501', 'hklam') or die ('Error! '.mysqli_connect_error($conn));
+$conn=mysqli_connect('sophia.cs.hku.hk', '*****', '*****', '*****') or die ('Error! '.mysqli_connect_error($conn));
 $newusername =$_POST['newusername'];
 $newpassword=$_POST['newpassword'];
 $query="SELECT * FROM FS_Users";
