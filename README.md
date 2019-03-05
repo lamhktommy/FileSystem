@@ -3,6 +3,8 @@
 For the final page:
 https://i.cs.hku.hk/~hklam/Tommy/index.html
 
+Little styling is applied XD
+
 System can be used following file format: ppt, pdf, jp(e)g, png, txt etc. 
 As there are some personal information in my files, some maybe censored as ****** to privacy use.
 
@@ -18,6 +20,7 @@ logout.php - allow users to logout
 updatefile.php - allow user to update files if filename is same as existing
 upload.php - allow users to upload
 verifylogin.php - verify login information of users 
+reference.txt - reference I looked for this challenge 
 
 
 File developing:
